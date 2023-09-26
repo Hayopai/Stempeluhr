@@ -1,0 +1,195 @@
+body.homepage {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(https://www.comline.de/fileadmin/news_import/Hauptversammlung_gebaeude.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.homepage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(57, 56, 56, 0.75);
+    opacity: 0.8;
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    min-height: 400px;
+    background-color: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.form h2, h2 {
+    color: rgba(57, 56, 56, 0.75);
+    margin: 0 0 40px;
+    padding: 0;
+    text-align: center;
+}
+
+.form .input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.form .input-box input {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid rgba(57, 56, 56, 0.75);
+    outline: none;
+    padding: 10px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: rgba(57, 56, 56, 0.75);
+}
+
+.form .input-box .fa {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    font-size: 18px;
+    color: rgba(57, 56, 56, 0.75);
+}
+
+.form .input-box input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    background-color: rgba(57, 56, 56, 0.75);
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.form .input-box input[type="submit"]:hover {
+    background-color: #cb3a09;
+}
+
+.form a {
+    text-decoration: none;
+    color: rgb(57, 56, 56);
+    margin-top: 20px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.form a:hover {
+    color: #cb3a09;
+}
+
+/* CSS in der styles.css-Datei */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.circle {
+    width: 95px;               /* Breite des Buttons */
+    height: 95px;              /* Höhe des Buttons */
+    font-size: 17px;           /* Schriftgröße des Textes innerhalb des Buttons */
+    text-align: center;        /* Text zentrieren */
+    cursor: pointer;           /* Hand-Cursor beim Überfahren mit der Maus */
+    outline: none;             /* Kein Umriss */
+    color: #fff;               /* Textfarbe */
+    border: none;              /* Kein Rand */
+    border-radius: 50%;        /* Kreisförmige Form */
+    box-shadow: 0 4px #999;   /* Schatten unter dem Button */
+    display: flex;             /* Flexbox verwenden, um Inhalt zu zentrieren */
+    justify-content: center;   /* Horizontal zentrieren */
+    align-items: center;       /* Vertikal zentrieren */
+    transition: 0.3s;          /* Für einen glatteren Übergangseffekt */
+}
+
+
+
+.circle:active {
+    box-shadow: 0 2px #666;    /* Verringerte Schattengröße beim Drücken */
+    transform: translateY(2px); /* Leichte Verschiebung nach unten beim Drücken */
+}
+
+
+.red {
+    background-color: #f54242;
+    color: #fff;
+}
+
+.blue {
+    background-color: #42a1f5;
+    color: #fff;
+}
+
+
+.button-group {
+    display: flex; /* Zeigt die Buttons in einer Zeile an */
+    gap: 10px; /* Fügt einen Abstand zwischen den Buttons hinzu */
+}
+.button-group {
+    margin-bottom: 20px; /* Fügt 20 Pixel Abstand unter den Buttons hinzu */
+}
+.timer-container {
+    margin-top: 20px; /* Fügt 20 Pixel Abstand über dem Timer hinzu */
+}
+button.circle:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+button {
+    border: none !important;
+}
+
+.banner {
+    display: none;
+    background-color: #42a1f5;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0; /* Dies stellt sicher, dass der Banner ganz links beginnt */
+    width: 100%;
+    z-index: 1000;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0; /* Setzt den Außenabstand auf 0 */
+    padding: 0; /* Setzt den Innenabstand auf 0 */
+}
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Arbeitszeiten</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+
+</head>
+<body>
+
+<form th:action="@{/saveArbeitszeit}" th:object="${arbeitszeiten}" method="post">
+
+    <div id="notificationBanner" class="banner">
+        <p>Sie haben nun bereits über 2 Stunden gearbeitet! Wie wäre es mit einer kurzen Pause?
+    </div>
+
+
+    <div class="center-content">
+        <div class="button-group">
+            <div id="toggleWorkBtnWrapper" title="">
+                <button type="button" id="toggleWorkBtn" class="circle red">Arbeit aufnehmen</button>
+            </div>
+            <div id="toggleBreakBtnWrapper" title="">
+                <button type="button" id="toggleBreakBtn" class="circle blue">Pause!</button>
+            </div>
+        </div>
+        <div class="timer-container">
+            <div class="timer">
+                Arbeitszeit: <span id="workTimer">00:00:00</span>
+            </div>
+            <div class="timer">
+                Pausenzeit: <span id="breakTimer">00:00:00</span>
+            </div>
+        </div>
+    </div>
+
+</form>
+<h1>Arbeitszeiten</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Datum</th>
+        <th>Beginn der Arbeit</th>
+        <th>Ende der Arbeit</th>
+        <th>Beginn der Pause</th>
+        <th>Ende der Pause</th>
+        <th>Gesamte Arbeitszeit</th>
+        <th>Gesamte Pausenzeit</th>
+        <!--    <th>User</th>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="arbeitszeit : ${zeiterfassungList}">
+        <td th:text="${arbeitszeit.z_id}"></td>
+        <td th:text="${arbeitszeit.arbeitsDatum}"></td>
+        <td th:text="${arbeitszeit.arbeitBeginn}"></td>
+        <td th:text="${arbeitszeit.arbeitEnde}"></td>
+        <td th:text="${arbeitszeit.pauseBeginn}"></td>
+        <td th:text="${arbeitszeit.pauseEnde}"></td>
+        <td th:text="${arbeitszeit.gesamtArbeitszeit}"></td>
+        <td th:text="${arbeitszeit.gesamtPausenzeit}"></td>
+        <!--    <td th:text="${arbeitszeit.usersModel.login}"></td>-->
+        <!--    <td><a th:href="@{/arbeitszeiten/{id}(id=${arbeitszeit.z_id})}">Details</a></td>-->
+    </tr>
+    </tbody>
+</table>
+<script src="/timerService.js"></script>
+</body>
+</html>

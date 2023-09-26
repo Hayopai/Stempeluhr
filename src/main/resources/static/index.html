@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+
+    <title>Zeiterfassung</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<div class="center-content">
+    <div class="timer-container">
+        <h1 style="font-size: 2em;">Willkommen!</h1>
+        <div class="description" style="font-size: 1.6em;">
+            <p>Hier kannst du einfach & schnell deine Arbeits- und Pausenzeit berechnen lassen!</p>
+            <p>Unser System erkennt, wann du eine Pause brauchen könntest und hilft dir, Termine mit einer
+                Erinnerungsfunktion zu planen.</p>
+            <p>Gemeinsam optimieren wir deine Tagesstruktur und erinnern dich an verdiente Pausen nach intensiven
+                Arbeitsphasen.</p>
+        </div>
+    </div>
+    <div class="timer-container">
+        <div class="button-group">
+            <form action="/login">
+                <button class="circle red" type="submit" style="font-size: 1em;">Zum Login</button>
+            </form>
+            <form action="/register">
+                <button class="circle blue" type="submit" style="font-size: 1em;">Hier registrieren</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

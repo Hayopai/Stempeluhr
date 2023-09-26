@@ -1,0 +1,33 @@
+
+.btn {
+  background-color: #777777;
+  border: none;
+  color: rgba(57, 56, 56, 0.75);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.button1 {
+  background-color: rgba(57, 56, 56, 0.75);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+}
+
+.button1:hover {
+  background-color: #ffffff;
+  color: #777777;
+}
+.button-group {
+  margin-bottom: 20px; /* Fügt 20 Pixel Abstand unter den Buttons hinzu */
+}
+.timer-container {
+  margin-top: 20px; /* Fügt 20 Pixel Abstand über dem Timer hinzu */
+}
